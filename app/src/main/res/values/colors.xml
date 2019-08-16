@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ec702c</color>
+    <color name="colorPrimaryDark">#eb6c30</color>
+    <color name="colorAccent">#ed702b</color>
+    <color name="colorShowTime">#E45247</color>
+    <color name="colorText">#F1821C</color>
+    <color name="colorBlackText">#262626</color>
+    <color name="colorMovieTitle">#222222</color>
+    <color name="colorFullCast">#666666</color>
+    <color name="colorRating">#FECB2F</color>
+    <color name="colorActionButton">#999999</color>
+</resources>
