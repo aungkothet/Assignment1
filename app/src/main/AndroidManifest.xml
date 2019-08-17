@@ -10,19 +10,19 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
-                android:name=".MovieDetailActivity"
+                android:name=".controllers.MovieDetailActivity"
                 android:label="@string/title_activity_movie_detail"
-                android:parentActivityName=".ProfileActivity"
+                android:parentActivityName=".controllers.ProfileActivity"
                 android:theme="@style/AppTheme.NoActionBar"
         >
         </activity>
         <activity
-                android:name=".ProfileActivity"
-                android:parentActivityName=".MainActivity"
+                android:name=".controllers.ProfileActivity"
+                android:parentActivityName=".controllers.MainActivity"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".MainActivity"
+                android:name=".controllers.MainActivity"
                 android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

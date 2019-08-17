@@ -1,4 +1,4 @@
-package io.github.aungkothet.padc.week2.assignment1
+package io.github.aungkothet.padc.week2.assignment1.models
 
 data class CastModel(
     val imageID: Int,

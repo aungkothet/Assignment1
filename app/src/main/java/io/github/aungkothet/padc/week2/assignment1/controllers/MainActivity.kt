@@ -1,8 +1,9 @@
-package io.github.aungkothet.padc.week2.assignment1
+package io.github.aungkothet.padc.week2.assignment1.controllers
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
+import io.github.aungkothet.padc.week2.assignment1.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -19,13 +20,18 @@ class MainActivity : AppCompatActivity() {
         val phone = et_phone.text.toString()
 
         if (isNameValid(name) && isEmailValid(email) && isPhoneValid(phone)) {
-            val intent = ProfileActivity.newIntent(this, name, email, phone)
+            val intent = ProfileActivity.newIntent(
+                this,
+                name,
+                email,
+                phone
+            )
             startActivity(intent)
             finish()
         }
     }
 
-    private fun isEmailValid(email: String): Boolean {
+    private fun isEmailValid(email: String?): Boolean {
         if (email.isNullOrBlank() || email.isNullOrEmpty()) {
             et_email.error = "Enter valid email!"
             return false
@@ -38,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
-    private fun isNameValid(name: String): Boolean {
+    private fun isNameValid(name: String?): Boolean {
         if (name.isNullOrEmpty() || name.isNullOrBlank()) {
             et_name.error = "Enter your name!"
             return false
@@ -46,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
-    private fun isPhoneValid(phone: String): Boolean {
+    private fun isPhoneValid(phone: String?): Boolean {
         if (phone.isNullOrBlank() || phone.isNullOrEmpty()) {
             et_phone.error = "Enter valid phone number!"
             return false

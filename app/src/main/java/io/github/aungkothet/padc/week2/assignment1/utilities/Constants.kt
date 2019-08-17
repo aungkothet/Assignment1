@@ -1,4 +1,4 @@
-package io.github.aungkothet.padc.week2.assignment1
+package io.github.aungkothet.padc.week2.assignment1.utilities
 
 const val IE_NAME = "name"
 const val IE_EMAIL = "email"

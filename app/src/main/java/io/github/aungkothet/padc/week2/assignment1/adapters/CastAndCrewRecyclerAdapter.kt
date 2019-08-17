@@ -1,17 +1,19 @@
-package io.github.aungkothet.padc.week2.assignment1
+package io.github.aungkothet.padc.week2.assignment1.adapters
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import io.github.aungkothet.padc.week2.assignment1.R
+import io.github.aungkothet.padc.week2.assignment1.models.CastModel
 import kotlinx.android.synthetic.main.cast_and_crew_list_item.view.*
 
-class CastAndCrewRecyclerAdapter (private val context: Context,private val casts:ArrayList<CastModel>)
-    :RecyclerView.Adapter<CastAndCrewRecyclerAdapter.ViewHolder>(){
+class CastAndCrewRecyclerAdapter(private val context: Context, private val casts: ArrayList<CastModel>) :
+    RecyclerView.Adapter<CastAndCrewRecyclerAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, position: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.cast_and_crew_list_item, parent, false)
-        return  ViewHolder(view)
+        return ViewHolder(view)
     }
 
     override fun getItemCount(): Int {
@@ -23,14 +25,13 @@ class CastAndCrewRecyclerAdapter (private val context: Context,private val casts
     }
 
 
-    inner class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val castImage = itemView.castImage
         private val castName = itemView.tv_cast_name
         private val castTitle = itemView.tv_cast_title
 
-        fun bindData(context: Context,cast: CastModel){
-            println(cast)
-            if(cast.castTitle.isNullOrEmpty()){
+        fun bindData(context: Context, cast: CastModel) {
+            if (cast.castTitle.isNullOrEmpty()) {
                 castTitle.visibility = View.GONE
             }
             castTitle.text = cast.castTitle
